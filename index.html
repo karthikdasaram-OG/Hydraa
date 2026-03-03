@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Flappy Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+        <h1 class="game-title">🎮 Mission Hydraa</h1>
+        <div id="characterPreview" class="character-preview"></div>
+        <button id="startBtn" class="btn">Start Game</button>
+        <p class="best-score-display">Best Score: <span id="bestScoreStart">0</span></p>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen hidden">
+        <div id="scoreDisplay" class="score">0</div>
+        <div id="gameArea" class="game-area">
+            <div id="player" class="player">
+                <img src="assets/player.png" alt="Player">
+            </div>
+            <div id="pipesContainer"></div>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen hidden">
+        <h2 class="game-over-title">Game Over!</h2>
+        <div id="crashGif" class="crash-gif"></div>
+        <p class="final-score">Score: <span id="finalScore">0</span></p>
+        <p class="best-score">Best: <span id="bestScore">0</span></p>
+        <button id="restartBtn" class="btn">Try Again</button>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
