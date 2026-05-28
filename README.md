@@ -89,3 +89,72 @@ Update `.player` and `.character-preview` styles in `style.css`
 ## 📄 License
 
 MIT License - Feel free to use and modify!
+
+## 🚀 DevOps CI/CD Implementation
+
+This project was extended with a complete DevOps CI/CD deployment pipeline using:
+
+* AWS EC2
+* Docker
+* Jenkins
+* Docker Hub
+* Kubernetes (K3s)
+
+### 🔄 CI/CD Workflow
+
+```text
+GitHub
+   ↓
+Jenkins Pipeline
+   ↓
+Docker Build
+   ↓
+Docker Hub Push
+   ↓
+Kubernetes Deployment
+   ↓
+Live Game Application
+```
+
+### 🐳 Docker
+
+The game application was containerized using Docker and served using NGINX.
+
+### ⚙️ Jenkins Pipeline
+
+The Jenkins pipeline automates:
+
+* Source code cloning
+* Docker image building
+* Docker Hub image push
+* Kubernetes deployment updates
+
+### ☸️ Kubernetes Deployment
+
+The application is deployed on Kubernetes using:
+
+* Deployment
+* Service (NodePort)
+* Rolling updates
+
+### 📂 Additional DevOps Files
+
+```text
+Dockerfile
+Jenkinsfile
+kubernetes/
+├── deployment.yaml
+└── service.yaml
+```
+
+### 🔮 Future Improvements
+
+* Terraform infrastructure automation
+* Ansible configuration management
+* Monitoring with Prometheus & Grafana
+* NGINX Ingress Controller
+* HTTPS & SSL setup
+
+```
+```
+
