@@ -40,11 +40,13 @@ pipeline {
             steps {
 
                 sh """
-                sed -i 's|image:.*|image: '"$IMAGE_NAME:$IMAGE_TAG"'|g' kubernetes/deployment.yaml
-                """
+                export KUBECONFIG=/var/lib/jenkins/.kube/config
 
-                sh 'kubectl apply -f kubernetes/'
-            }
+                sed -i 's|image:.*|image: '"$IMAGE_NAME:$IMAGE_TAG"'|g' kubernetes/deployment.yaml
+
+                kubectl apply -f kubernetes/
+                """
+           }
         }
     }
 }
